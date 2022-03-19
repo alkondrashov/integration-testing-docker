@@ -1,0 +1,3 @@
+USE carsdb;
+
+CREATE TABLE IF NOT EXISTS cars (id SERIAL, name VARCHAR(100), available BOOLEAN)
