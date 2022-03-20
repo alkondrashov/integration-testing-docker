@@ -6,16 +6,16 @@ services:
       context: .
       dockerfile: Dockerfile.integration
     environment:
-      - API_URL=http://web:5000
+      - API_URL=http://web:5001
       - CONNECTION_STRING=Server=db;Database=carsdb;Uid=root;Pwd=password;SslMode=Required;      
-    entrypoint: bash /app/wait_for_it.sh web:5000 -t 0 -- dotnet test --logger "console;verbosity=detailed"
+    entrypoint: bash /app/wait_for_it.sh web:5001 -t 0 -- dotnet test --logger "console;verbosity=detailed"
     depends_on:
       - web
       - db
   web:
     build: .
     ports: 
-      - 5000:5000
+      - 5001:5001
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - CONNECTION_STRING=Server=db;Database=carsdb;Uid=root;Pwd=password;SslMode=Required;
@@ -23,6 +23,7 @@ services:
     depends_on:
       - db
   db:
+    platform: linux/x86_64
     image: mysql
     ports:
       - 3306:3306
