@@ -6,7 +6,7 @@ namespace Cars.Controllers
 
         public string Name { get; set; }
         
-        public string Id { get; set; }
+        public string? Id { get; set; }
         
         public bool Available { get; set; }
     }

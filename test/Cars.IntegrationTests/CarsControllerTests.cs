@@ -2,7 +2,6 @@ using System;
 using System.Net.Http;
 using Newtonsoft.Json;
 using Xunit;
-using Shouldly;
 using MySql.Data.MySqlClient;
 using Dapper;
 using System.Text;
@@ -40,8 +39,8 @@ namespace Cars.IntegrationTests
             var response = await client.GetAsync($"{_url}/{expectedModel.Id}");
             var actualModel = JsonConvert.DeserializeObject<CarModel>(await result.Content.ReadAsStringAsync());
             
-            actualModel.Id.ShouldBe(expectedModel.Id);
-            actualModel.Name.ShouldBe(expectedModel.Name);
+            Assert.Equal(expectedModel.Id, actualModel.Id);
+            Assert.Equal(expectedModel.Name, actualModel.Name);
         }
 
         public void Dispose()
