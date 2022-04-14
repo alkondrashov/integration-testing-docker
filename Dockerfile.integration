@@ -1,6 +1,6 @@
 # /Dockerfile.integration
 FROM mcr.microsoft.com/dotnet/sdk:6.0 as builder
 COPY . /app
-WORKDIR /app/test/Cars.IntegrationTests
+WORKDIR /app/test/Cars.Tests
 RUN curl https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh > /app/wait_for_it.sh \
     && dotnet restore

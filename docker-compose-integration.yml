@@ -27,7 +27,7 @@ services:
     image: mysql
     ports:
       - 3306:3306
-    # Start the container with a todosdb, and password as the root users password
+    # Start the container with a carsdb, and password as the root users password
     environment: 
       - MYSQL_DATABASE=carsdb
       - MYSQL_ROOT_PASSWORD=password

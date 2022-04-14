@@ -8,7 +8,7 @@ using System.Text;
 using Xunit.Abstractions;
 using Cars.Controllers;
 
-namespace Cars.IntegrationTests
+namespace Cars.Tests
 {
     public class CarsControllerTests : IDisposable
     {

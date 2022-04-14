@@ -6,7 +6,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cars", "src\Cars\Cars.cspro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{359BAC15-F0F7-4B9D-8679-2BE94152D5B6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cars.IntegrationTests", "test\Cars.IntegrationTests\Cars.IntegrationTests.csproj", "{0AF9C908-6C70-4FED-85BE-BD7B6F5B4776}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cars.Tests", "test\Cars.Tests\Cars.Tests.csproj", "{0AF9C908-6C70-4FED-85BE-BD7B6F5B4776}"
 	ProjectSection(ProjectDependencies) = postProject
 		{A9554640-EF55-4DCD-ADC9-C706487ED4F3} = {A9554640-EF55-4DCD-ADC9-C706487ED4F3}
 	EndProjectSection
