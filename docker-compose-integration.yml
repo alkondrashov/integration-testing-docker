@@ -26,7 +26,7 @@ services:
     platform: linux/x86_64
     image: mysql
     ports:
-      - 3306:3306
+      - 3307:3306
     # Start the container with a carsdb, and password as the root users password
     environment: 
       - MYSQL_DATABASE=carsdb

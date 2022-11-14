@@ -19,7 +19,7 @@ namespace Cars.Controllers
         }
 
         [HttpPost]
-        public async Task<CarModel> Post(CarModel model)
+        public async Task<CarModel> Create(CarModel model)
         {
 
             using (var connection = new MySqlConnection(_connectionString))
