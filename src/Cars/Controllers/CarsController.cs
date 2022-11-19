@@ -39,7 +39,7 @@ namespace Cars.Controllers
             _logger.LogInformation("Connection: " + _connectionString);
             using(var connection = new MySqlConnection(_connectionString))
             {
-                var result = await connection.QueryAsync<CarModel>("SELECT id,available,name FROM cars WHERE id=@Id", new { Id = id });
+                var result = await connection.QueryAsync<CarModel>("SELECT idavailable,name FROM cars WHERE id=@Id", new { Id = id });
                 var model = result.FirstOrDefault();
                 _logger.LogInformation("Model with id: " + model.Id);
                 return model;
