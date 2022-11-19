@@ -37,7 +37,7 @@ namespace Cars.Tests
             var expectedModel = JsonConvert.DeserializeObject<CarModel>(await result.Content.ReadAsStringAsync());
             
             var response = await client.GetAsync($"{_url}/{expectedModel.Id}");
-            var actualModel = JsonConvert.DeserializeObject<CarModel>(await result.Content.ReadAsStringAsync());
+            var actualModel = JsonConvert.DeserializeObject<CarModel>(await response.Content.ReadAsStringAsync());
             
             Assert.Equal(expectedModel.Id, actualModel.Id);
             Assert.Equal(expectedModel.Name, actualModel.Name);
