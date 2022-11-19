@@ -1,0 +1,17 @@
+name: "CI"
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - "releases/*"
+
+jobs:
+  # Integration Test
+  tests:
+    name: "Integration Test"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - run: dotnet build
+      - run: docker-compose up --build --abort-on-container-exit
