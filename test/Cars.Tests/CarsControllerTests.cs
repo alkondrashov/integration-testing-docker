@@ -26,7 +26,7 @@ namespace Cars.Tests
         }
         
         [Fact]
-        public async void shouldAddToDatabaseOnPost()
+        public async void testCreateCar()
         {
             var client = new HttpClient();
             var car = new CarModel { Available = false, Name = "Test Text" };
